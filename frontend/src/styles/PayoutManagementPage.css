@@ -1,0 +1,202 @@
+/* Payout Management Page Styles */
+
+.payout-management-page {
+  padding: var(--space-4) 0;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-8);
+}
+
+.page-header h2 {
+  margin: 0;
+  color: var(--color-ink);
+}
+
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.filter-controls label {
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.filter-controls select {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-body);
+}
+
+.loading {
+  text-align: center;
+  padding: var(--space-12);
+  color: var(--color-ink-light);
+}
+
+.warning-text {
+  color: var(--color-warning-dark);
+  font-weight: var(--weight-medium);
+}
+
+/* Use .alert-error class from components.css */
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-12);
+  color: var(--color-ink-light);
+}
+
+.payout-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.payout-stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-base);
+  padding: var(--space-2) var(--space-3);
+}
+
+.payout-stat-value {
+  font-weight: var(--weight-semibold);
+  color: var(--color-ink);
+}
+
+.payouts-table-container {
+  overflow-x: auto;
+  border-radius: var(--radius-base);
+  background: var(--color-surface-elevated);
+  box-shadow: var(--shadow-base);
+}
+
+.payouts-table {
+  /* Use .data-table class from components.css */
+  min-width: 800px;
+}
+
+.amount {
+  font-weight: var(--weight-bold);
+  color: var(--color-success);
+  font-size: var(--text-body);
+}
+
+.status-badge {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background: var(--color-warning-alpha-10);
+  color: var(--color-warning-dark);
+}
+
+.status-processing {
+  background: var(--color-primary-alpha-10);
+  color: var(--color-info);
+}
+
+.status-completed {
+  background: var(--color-success-alpha-10);
+  color: var(--color-success-dark);
+}
+
+.status-rejected {
+  background: var(--color-error-alpha-10);
+  color: var(--color-error-dark);
+}
+
+.payment-info {
+  font-size: var(--text-caption);
+}
+
+.small {
+  font-size: var(--text-small);
+  color: var(--color-ink-light);
+}
+
+.notes {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--text-caption);
+  color: var(--color-ink-light);
+}
+
+.action-buttons {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.btn-process,
+.btn-reject,
+.btn-complete {
+  padding: var(--space-2) var(--space-4);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+}
+
+.btn-process {
+  background: var(--color-info);
+  color: white;
+}
+
+.btn-process:hover {
+  background: var(--color-primary-dark);
+}
+
+.btn-complete {
+  background: var(--color-success);
+  color: white;
+}
+
+.btn-complete:hover {
+  background: var(--color-success-dark);
+}
+
+.btn-reject {
+  background: var(--color-error);
+  color: white;
+}
+
+.btn-reject:hover {
+  background: var(--color-error-dark);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .payouts-table-container {
+    overflow-x: auto;
+  }
+
+  .payouts-table {
+    min-width: 800px;
+  }
+}
+

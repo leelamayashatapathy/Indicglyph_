@@ -1,0 +1,330 @@
+/* Import fonts first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Import Design System */
+@import './styles/global.css';
+@import './styles/components.css';
+
+/* Legacy Compatibility (to be refactored) */
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-caption);
+  color: var(--color-ink);
+}
+
+/* Old button styles mapped to new system */
+button:not([class*="btn"]) {
+  background: var(--color-primary);
+  color: var(--color-surface-elevated);
+  padding: var(--space-3) var(--space-6);
+  border: none;
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  font-size: var(--text-body);
+  font-weight: var(--weight-medium);
+  transition: all var(--transition-base);
+}
+
+button:not([class*="btn"]):hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+button:not([class*="btn"]):disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+button.secondary {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+}
+
+button.danger {
+  background: var(--color-error);
+}
+
+button.danger:hover {
+  background: #DC2626; /* Slightly darker error - could add --color-error-dark if needed */
+}
+
+.error {
+  background: var(--color-error-alpha-10);
+  color: var(--color-error);
+  padding: var(--space-4);
+  border-radius: var(--radius-base);
+  margin-bottom: var(--space-4);
+  border-left: 4px solid var(--color-error);
+}
+
+.success {
+  background: var(--color-success-alpha-10);
+  color: var(--color-success);
+  padding: var(--space-4);
+  border-radius: var(--radius-base);
+  margin-bottom: var(--space-4);
+  border-left: 4px solid var(--color-success);
+}
+
+/* Modern Navigation - Full Width with Hamburger Menu */
+nav {
+  background: var(--gradient-hero);
+  color: var(--color-surface-elevated);
+  padding: var(--space-4) 0;
+  box-shadow: var(--shadow-lg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+nav .nav-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  position: relative;
+}
+
+/* Theme toggle is now a DIRECT CHILD of nav-content - ALWAYS VISIBLE */
+nav .nav-content > .theme-toggle {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  order: 2 !important;
+}
+
+nav .nav-content > div {
+  order: 3 !important;
+}
+
+nav h1 {
+  font-size: var(--text-h2);
+  font-weight: var(--weight-bold);
+  margin: 0;
+  background: linear-gradient(135deg, var(--color-surface-elevated) 0%, var(--color-primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-base);
+  transition: all var(--transition-base);
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+}
+
+nav a:hover {
+  color: var(--color-surface-elevated);
+  background: var(--color-white-alpha-10);
+}
+
+nav button:not(.theme-toggle) {
+  background: var(--color-white-alpha-10);
+  border: 1px solid var(--color-white-alpha-20);
+  color: var(--color-surface-elevated);
+  padding: var(--space-2) var(--space-4);
+}
+
+nav button:not(.theme-toggle):hover {
+  background: var(--color-white-alpha-20);
+  transform: none;
+}
+
+/* Theme toggle button in nav - override generic nav button styles */
+nav .theme-toggle {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  color: var(--color-surface-elevated) !important;
+  padding: var(--space-2) !important;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.5rem !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  border-radius: 8px !important;
+  flex-shrink: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  z-index: 1000 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+nav .theme-toggle:hover {
+  background: var(--color-white-alpha-20) !important;
+  border-color: var(--color-primary) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Hamburger Menu Button (Hidden on Desktop) */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 101;
+}
+
+/* Ensure theme toggle is visible and before hamburger */
+nav .nav-content > div:has(.theme-toggle) {
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--space-2) !important;
+  order: 2;
+}
+
+nav .theme-toggle {
+  order: 1 !important;
+}
+
+.hamburger-menu {
+  order: 2 !important;
+}
+
+nav ul {
+  order: 3 !important;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu span.open:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-menu span.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu span.open:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Navigation Responsiveness - Hamburger Menu */
+@media (max-width: 768px) {
+  nav {
+    padding: 0.75rem 0;
+  }
+
+  nav .nav-content {
+    padding: 0 1rem;
+    position: relative;
+  }
+
+  nav h1 {
+    font-size: 1.25rem;
+  }
+
+  .brand-studio {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: linear-gradient(135deg, var(--color-navy-base) 0%, #1a2332 100%);
+    flex-direction: column;
+    width: 250px;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    padding: var(--space-4);
+    gap: var(--space-2);
+    border-left: 1px solid var(--color-primary-alpha-30);
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform var(--transition-base);
+    z-index: 99;
+  }
+
+  nav ul.mobile-open {
+    transform: translateX(0);
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  nav button:not(.theme-toggle) {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    text-align: left;
+    border-radius: var(--radius-lg);
+  }
+
+  nav .theme-toggle {
+    width: 40px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    padding: var(--space-2) !important;
+    text-align: center !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  nav h1 {
+    font-size: 1.1rem;
+  }
+
+  nav ul {
+    width: 100%;
+    top: 55px;
+  }
+}

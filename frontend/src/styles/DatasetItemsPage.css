@@ -1,0 +1,232 @@
+/* Dataset Items Page Styles */
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-5);
+  margin-bottom: var(--space-8);
+}
+
+.stat-card {
+  background: linear-gradient(135deg, var(--color-accent-purple-auth) 0%, var(--color-accent-purple) 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  color: white;
+  box-shadow: var(--shadow-base);
+}
+
+.stat-card.pending {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.stat-card.finalized {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.stat-value {
+  font-size: var(--text-section-title);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-2);
+}
+
+.stat-label {
+  font-size: var(--text-caption);
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filters-section {
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  padding: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.filters-section h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+.search-box {
+  margin-bottom: var(--space-5);
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-body);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-base);
+  transition: border-color var(--transition-base);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-accent-purple-auth);
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.filters-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.items-stats {
+  margin-bottom: var(--space-4);
+}
+
+.items-table-container {
+  overflow-x: auto;
+  border-radius: var(--radius-base);
+}
+
+.items-table {
+  /* Use .data-table class from components.css */
+}
+
+.items-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--transition-base);
+}
+
+.items-table th.sortable:hover {
+  background: var(--color-gray-100);
+}
+
+.item-number {
+  font-family: var(--font-mono);
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  color: var(--color-accent-purple-auth);
+}
+
+.lang-badge {
+  background: var(--color-primary-alpha-10);
+  color: var(--color-info);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+}
+
+.status-badge {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+}
+
+.status-pending {
+  background: var(--color-warning-alpha-10);
+  color: var(--color-warning-dark);
+}
+
+.status-in-review {
+  background: var(--color-primary-alpha-10);
+  color: var(--color-info);
+}
+
+.status-finalized {
+  background: var(--color-success-alpha-10);
+  color: var(--color-success-dark);
+}
+
+.content-preview {
+  max-width: 300px;
+  font-size: var(--text-caption);
+}
+
+.content-preview > div {
+  margin-bottom: var(--space-1);
+}
+
+.content-preview strong {
+  color: var(--color-ink-light);
+  margin-right: var(--space-1);
+}
+
+.created-date {
+  font-size: var(--text-caption);
+  color: var(--color-ink-light);
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .stats-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-cards {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .stat-value {
+    font-size: var(--text-h1);
+  }
+
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-section {
+    padding: var(--space-4);
+  }
+
+  .items-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .items-table {
+    min-width: 900px;
+  }
+
+  .search-input {
+    font-size: var(--text-body); /* Prevents zoom on iOS */
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-value {
+    font-size: 1.75rem;
+  }
+
+  .stat-label {
+    font-size: var(--text-small);
+  }
+
+  .pagination-controls {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .pagination-controls button {
+    width: 100%;
+  }
+
+  .filters-actions {
+    flex-direction: column;
+  }
+
+  .filters-actions button {
+    width: 100%;
+  }
+}
+

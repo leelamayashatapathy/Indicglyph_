@@ -1,0 +1,867 @@
+[
+  {
+    "domain": "https://demo.opencart.com",
+    "scraping_type": "FULL_JS",
+    "scraping_approach": {
+      "tool": "Playwright",
+      "rate_limit": "0.2 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": true
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demo.nopcommerce.com",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://world.openfoodfacts.org",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://world.openbeautyfacts.org",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://world.openpetfoodfacts.org",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://world.openproductsfacts.org",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://webscraper.io/test-sites/e-commerce/allinone",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://automationexercise.com/products",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demoblaze.com/index.html",
+    "scraping_type": "FULL_JS",
+    "scraping_approach": {
+      "tool": "Playwright",
+      "rate_limit": "0.5 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://tutorialsninja.com/demo",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://frontends-demo.vercel.app",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demo.spreecommerce.org",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://petstore.octoperf.com/actions/Catalog.action",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demo.bagisto.com/mobikul-common",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demo.saleor.io",
+    "scraping_type": "FULL_JS",
+    "scraping_approach": {
+      "tool": "Playwright",
+      "rate_limit": "0.5 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demo.vercel.store",
+    "scraping_type": "FULL_JS",
+    "scraping_approach": {
+      "tool": "Playwright",
+      "rate_limit": "0.5 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demo.yournextstore.com",
+    "scraping_type": "FULL_JS",
+    "scraping_approach": {
+      "tool": "Playwright",
+      "rate_limit": "0.5 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://next.medusajs.com/us",
+    "scraping_type": "FULL_JS",
+    "scraping_approach": {
+      "tool": "Playwright",
+      "rate_limit": "0.5 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://practice.automationtesting.in/shop",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://practice.expandtesting.com/BookStore",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://web\u2011scraping.dev",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://sandbox.oxylabs.io/products",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://books.toscrape.com",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://dummyjson.com/products",
+    "scraping_type": "API_JSON",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "2 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": null
+  },
+  {
+    "domain": "https://store.refine.dev",
+    "scraping_type": "FULL_JS",
+    "scraping_approach": {
+      "tool": "Playwright",
+      "rate_limit": "0.5 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://bigcommerce-addons.mybigcommerce.com",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://woodmart.xtemos.com/shop",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demo.woocommerce.sparklayer.io",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demos.mklacroix.com",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://sanbox-integration.foloosi.com",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://jopwoocommercedemo.com",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://woo.gtm4wp.dev",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demostore.freecluster.eu",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demo.checkoutwc.com/shop",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://woocommerce.torvo.com.au",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demo.storeapps.org",
+    "scraping_type": "SEMI_DYNAMIC",
+    "scraping_approach": {
+      "tool": "hybrid (requests + browser)",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://hydrogen.shop",
+    "scraping_type": "FULL_JS",
+    "scraping_approach": {
+      "tool": "Playwright",
+      "rate_limit": "0.5 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://opencart.abstracta.us",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://naveenautomationlabs.com/opencart",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://fakestoreapi.com/products",
+    "scraping_type": "API_JSON",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "2 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": null
+  },
+  {
+    "domain": "https://api.escuelajs.co/api/v1/products",
+    "scraping_type": "API_JSON",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "2 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": null
+  },
+  {
+    "domain": "https://fakerapi.it/api/v1/products",
+    "scraping_type": "API_JSON",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "2 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": null
+  },
+  {
+    "domain": "https://api.pujakaitem.com/products",
+    "scraping_type": "API_JSON",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "2 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": null
+  },
+  {
+    "domain": "https://demo.vuestorefront.io",
+    "scraping_type": "FULL_JS",
+    "scraping_approach": {
+      "tool": "Playwright",
+      "rate_limit": "0.5 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://shop.polymer-project.org",
+    "scraping_type": "FULL_JS",
+    "scraping_approach": {
+      "tool": "Playwright",
+      "rate_limit": "0.5 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demo.algolia.com/netlify/ecommerce",
+    "scraping_type": "FULL_JS",
+    "scraping_approach": {
+      "tool": "Playwright",
+      "rate_limit": "0.5 req/sec",
+      "user_agent_rotation": true,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demo.virtuemart.net",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://shop.demoqa.com",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://automationbookstore.dev",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  },
+  {
+    "domain": "https://demowebshop.tricentis.com",
+    "scraping_type": "STATIC_HTML",
+    "scraping_approach": {
+      "tool": "requests",
+      "rate_limit": "1 req/sec",
+      "user_agent_rotation": false,
+      "captcha_detected": false
+    },
+    "selectors": {
+      "product_list_divs": "generic product container (e.g., div.product, div.card, li.product)",
+      "image_tags": "img[src] (may use lazy-loading via data-src)",
+      "pagination": "numbered pages / simple page links",
+      "price_selector": "e.g., .price or h2",
+      "title_selector": "e.g., a.title or h4",
+      "hidden_payloads": null
+    }
+  }
+]

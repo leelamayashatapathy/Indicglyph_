@@ -1,0 +1,218 @@
+/* Homepage Setup Admin Panel Styles */
+
+.homepage-setup {
+  padding: var(--space-8);
+  max-width: 1200px;
+}
+
+.page-title {
+  font-size: var(--text-h1);
+  margin-bottom: var(--space-2);
+  color: var(--color-ink);
+}
+
+.page-subtitle {
+  color: var(--color-ink-light);
+  margin-bottom: var(--space-8);
+}
+
+.message {
+  padding: var(--space-4);
+  border-radius: var(--radius-base);
+  margin-bottom: var(--space-8);
+  font-weight: var(--weight-medium);
+}
+
+.message.success {
+  /* Use .alert-success class from components.css */
+  background: var(--color-success-alpha-10);
+  color: var(--color-success-dark);
+  border: 1px solid var(--color-success-alpha-20);
+}
+
+.message.error {
+  /* Use .alert-error class from components.css */
+  background: var(--color-error-alpha-10);
+  color: var(--color-error-dark);
+  border: 1px solid var(--color-error-alpha-20);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.tab {
+  padding: var(--space-4) var(--space-8);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-body);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink-light);
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.tab:hover {
+  color: var(--color-primary);
+}
+
+.tab.active {
+  color: var(--color-primary);
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-primary);
+}
+
+/* Section Content */
+.section-content {
+  /* Use .card class from components.css */
+  padding: var(--space-8);
+}
+
+.section-content h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-6);
+  color: var(--color-ink);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-8);
+}
+
+.section-header h3 {
+  margin: 0;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: var(--space-6);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  font-size: var(--text-body);
+  transition: border-color var(--transition-base);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* Testimonial & Sponsor Editors */
+.testimonial-editor,
+.sponsor-editor {
+  background: var(--color-surface);
+  padding: var(--space-6);
+  border-radius: var(--radius-base);
+  margin-bottom: var(--space-6);
+  border: 1px solid var(--color-border);
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.editor-header h4 {
+  margin: 0;
+  color: var(--color-ink);
+}
+
+/* Buttons */
+/* Buttons use standardized .btn classes from components.css */
+.btn-danger-sm {
+  /* Use .btn-danger.btn-sm classes from components.css */
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-error);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-caption);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.btn-danger-sm:hover {
+  background: var(--color-error-dark);
+  transform: translateY(-1px);
+}
+
+.loading {
+  text-align: center;
+  padding: var(--space-16);
+  color: var(--color-ink-light);
+  font-size: var(--text-h3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .homepage-setup {
+    padding: var(--space-4);
+  }
+  
+  .tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .tab {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-caption);
+    white-space: nowrap;
+  }
+  
+  .section-content {
+    padding: var(--space-6);
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+}

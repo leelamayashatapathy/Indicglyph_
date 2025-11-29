@@ -1,0 +1,28 @@
+/* Profile Page Styles */
+
+.profile-page {
+  padding: var(--space-6) 0;
+}
+
+.profile-content {
+  margin-top: var(--space-4);
+}
+
+.profile-content p {
+  margin-bottom: var(--space-3);
+  color: var(--color-ink);
+  font-size: var(--text-body);
+}
+
+.profile-content strong {
+  color: var(--color-ink);
+  font-weight: var(--weight-semibold);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .profile-page {
+    padding: var(--space-4) 0;
+  }
+}
+
