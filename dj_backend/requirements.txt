@@ -1,0 +1,22 @@
+# Django and REST Framework - Latest stable versions
+Django>=5.1.0,<6.0.0
+djangorestframework>=3.15.0
+djangorestframework-simplejwt>=5.3.0
+
+# Database - Use psycopg2-binary (pre-built wheels, no compilation needed)
+psycopg2-binary>=2.9.9
+
+# Configuration
+python-decouple>=3.8
+
+# CORS
+django-cors-headers>=4.3.0
+
+# Image processing - Latest Pillow
+Pillow>=10.4.0
+
+# Password hashing
+bcrypt>=4.2.0
+
+# Additional utilities
+pytz>=2024.1
