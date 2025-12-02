@@ -105,3 +105,5 @@ def bulk_upload_zip(request):
         'errors': errors[:10]  # Limit errors
     }, status=status.HTTP_201_CREATED)
 
+
+

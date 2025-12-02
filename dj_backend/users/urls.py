@@ -15,11 +15,17 @@ from .views import (
 app_name = 'users'
 
 urlpatterns = [
-    path('register/', RegisterView.as_view(), name='register'),
-    path('login/', LoginView.as_view(), name='login'),
-    path('logout/', logout_view, name='logout'),
-    path('me/', UserProfileView.as_view(), name='profile'),
-    path('change-password/', ChangePasswordView.as_view(), name='change-password'),
-    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('register', RegisterView.as_view(), name='register'),
+    path('register/', RegisterView.as_view(), name='register-slash'),
+    path('login', LoginView.as_view(), name='login'),
+    path('login/', LoginView.as_view(), name='login-slash'),
+    path('logout', logout_view, name='logout'),
+    path('logout/', logout_view, name='logout-slash'),
+    path('me', UserProfileView.as_view(), name='profile'),
+    path('me/', UserProfileView.as_view(), name='profile-slash'),
+    path('change-password', ChangePasswordView.as_view(), name='change-password'),
+    path('change-password/', ChangePasswordView.as_view(), name='change-password-slash'),
+    path('token/refresh', TokenRefreshView.as_view(), name='token_refresh'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh-slash'),
 ]
 

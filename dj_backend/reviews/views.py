@@ -1,3 +1,5 @@
+from typing import Any, TypedDict, Literal, cast
+
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
@@ -13,6 +15,20 @@ from .models import ReviewLog, SystemConfig
 from .serializers import ReviewSubmitSerializer, ReviewLogSerializer, FlagItemSerializer
 
 
+class ReviewSubmitData(TypedDict):
+    item_id: Any
+    action: Literal["approve", "edit", "skip"]
+    changes: dict[str, Any] | None
+    skip_data_correct: bool
+    skip_feedback: str | None
+
+
+class FlagItemData(TypedDict):
+    item_id: Any
+    reason: Literal["offensive", "corrupt", "unclear", "other"]
+    note: str | None
+
+
 class SubmitReviewView(APIView):
     """Submit a review: approve/edit/skip."""
     permission_classes = [IsAuthenticated]
@@ -20,12 +36,13 @@ class SubmitReviewView(APIView):
     def post(self, request):
         serializer = ReviewSubmitSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        
-        item_id = serializer.validated_data['item_id']
-        action = serializer.validated_data['action']
-        changes = serializer.validated_data.get('changes')
-        skip_data_correct = serializer.validated_data.get('skip_data_correct', False)
-        skip_feedback = serializer.validated_data.get('skip_feedback')
+
+        data = cast(ReviewSubmitData, serializer.validated_data)
+        item_id = data["item_id"]
+        action = data["action"]
+        changes = data.get("changes")
+        skip_data_correct = data.get("skip_data_correct", False)
+        skip_feedback = data.get("skip_feedback")
         
         # Get item
         item = get_object_or_404(DatasetItem, id=item_id)
@@ -151,10 +168,11 @@ def flag_item(request):
     """Flag an item as suspicious or inappropriate."""
     serializer = FlagItemSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
-    
-    item_id = serializer.validated_data['item_id']
-    reason = serializer.validated_data['reason']
-    note = serializer.validated_data.get('note', '')
+
+    data = cast(FlagItemData, serializer.validated_data)
+    item_id = data["item_id"]
+    reason = data["reason"]
+    note = data.get("note", "")
     
     item = get_object_or_404(DatasetItem, id=item_id)
     

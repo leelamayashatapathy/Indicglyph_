@@ -172,3 +172,5 @@ Visit `http://localhost:8000/admin/` and login with superuser credentials.
 - CORS is configured to allow frontend origins
 - Class-based views are used: GenericAPIView for GET operations, APIView for POST/PUT/PATCH
 
+
+

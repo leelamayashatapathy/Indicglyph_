@@ -83,3 +83,5 @@ def update_footer(request):
     content.save()
     return Response(content.footer)
 
+
+
