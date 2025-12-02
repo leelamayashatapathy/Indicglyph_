@@ -13,3 +13,5 @@ def health_check(request):
         'app': 'IndicGlyph Data Studio'
     })
 
+
+

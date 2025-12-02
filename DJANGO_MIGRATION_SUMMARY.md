@@ -190,3 +190,5 @@ Required environment variables (see `.env.example`):
 - CORS is configured to allow frontend origins
 - PostgreSQL is required (SQLite not supported for production)
 
+
+

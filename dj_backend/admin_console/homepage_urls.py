@@ -19,3 +19,5 @@ urlpatterns = [
     path('footer/', update_footer, name='footer-update'),
 ]
 
+
+

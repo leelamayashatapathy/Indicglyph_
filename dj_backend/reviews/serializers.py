@@ -35,3 +35,5 @@ class FlagItemSerializer(serializers.Serializer):
     reason = serializers.ChoiceField(choices=['offensive', 'corrupt', 'unclear', 'other'])
     note = serializers.CharField(required=False, allow_null=True, allow_blank=True)
 
+
+

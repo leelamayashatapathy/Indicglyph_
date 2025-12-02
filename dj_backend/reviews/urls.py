@@ -15,3 +15,5 @@ urlpatterns = [
     path('flag/', flag_item, name='flag'),
 ]
 
+
+

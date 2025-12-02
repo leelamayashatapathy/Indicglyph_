@@ -11,3 +11,5 @@ class IsPlatformOperator(permissions.BasePermission):
         user_roles = request.user.roles or []
         return any(role in ['platform_operator', 'super_operator'] for role in user_roles)
 
+
+
